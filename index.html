@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  Portfólio Pessoal - Gabriele Lima da Conceição Gomes
+  Atividade Prática - Fundamentos da Programação Web
+  Arquitetura: layout com barra lateral fixa (sidebar) +
+               conteúdo em painéis, navegação por âncoras.
+  Tecnologias: HTML5 + CSS3 + JavaScript (sem frameworks)
+  ============================================================
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio pessoal de Gabriele Lima da Conceição Gomes - currículo online." />
+  <meta name="author" content="Gabriele Lima da Conceição Gomes" />
+  <title>Gabriele Lima | Portfólio</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>" />
+</head>
+
+<body>
+
+  <!-- Barra superior que só aparece no celular (contém o botão do menu) -->
+  <div class="topbar-mobile">
+    <span class="topbar-logo">Gabriele<span>.</span></span>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+  </div>
+
+  <!-- ============================================================
+       BARRA LATERAL FIXA - serve de menu visível em todas as seções
+       ============================================================ -->
+  <aside class="sidebar" id="sidebar">
+    <!-- Cartão de identificação no topo da sidebar -->
+    <div class="perfil">
+      <!-- Para usar sua foto: salve-a como img/foto.jpg. Enquanto não houver foto,
+           aparecem as iniciais "GL". A foto, quando existir, cobre o círculo. -->
+      <div class="perfil-avatar">
+        GL
+        <img src="img/foto.jpg" alt="Foto de Gabriele Lima"
+             onerror="this.style.display='none'" />
+      </div>
+      <h1 class="perfil-nome">Gabriele Lima</h1>
+      <p class="perfil-cargo">Desenvolvedora Web em formação</p>
+    </div>
+
+    <!-- Navegação principal por âncoras -->
+    <nav class="nav">
+      <a href="#inicio" class="nav-link"><span class="nav-icone">🏠</span> Início</a>
+      <a href="#sobre" class="nav-link"><span class="nav-icone">👤</span> Sobre mim</a>
+      <a href="#formacao" class="nav-link"><span class="nav-icone">🎓</span> Formação</a>
+      <a href="#portfolio" class="nav-link"><span class="nav-icone">💼</span> Portfólio</a>
+      <a href="#contato" class="nav-link"><span class="nav-icone">✉️</span> Contato</a>
+    </nav>
+
+    <!-- Rodapé da sidebar: tema + redes -->
+    <div class="sidebar-rodape">
+      <button class="tema-toggle" id="tema-toggle" aria-label="Alternar tema">🌙 Tema escuro</button>
+      <div class="sidebar-redes">
+        <a href="#" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a href="#" target="_blank" rel="noopener" title="GitHub">gh</a>
+        <a href="#" target="_blank" rel="noopener" title="Instagram">ig</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Camada escura que aparece atrás do menu aberto no celular -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ============================================================
+       CONTEÚDO PRINCIPAL (à direita da sidebar)
+       ============================================================ -->
+  <main class="conteudo">
+
+    <!-- ---------- INÍCIO / APRESENTAÇÃO ---------- -->
+    <section class="painel painel-inicio" id="inicio">
+      <div class="inicio-texto">
+        <span class="etiqueta">Portfólio • Currículo Online</span>
+        <h2 class="inicio-titulo">Olá! Eu sou a <span class="destaque">Gabriele</span>.</h2>
+        <p class="inicio-sub">
+          Transformo ideias em páginas web. Este é meu espaço para apresentar quem sou,
+          minha formação e os projetos que venho construindo.
+        </p>
+        <div class="inicio-botoes">
+          <a href="#portfolio" class="btn btn-primario">Ver meus projetos</a>
+          <a href="#contato" class="btn btn-vazado">Entrar em contato</a>
+        </div>
+
+        <!-- Pequenos números de destaque -->
+        <div class="estatisticas">
+          <div class="estatistica"><strong>4+</strong><span>Projetos</span></div>
+          <div class="estatistica"><strong>3</strong><span>Idiomas</span></div>
+          <div class="estatistica"><strong>100%</strong><span>Dedicação</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- SOBRE MIM ---------- -->
+    <section class="painel" id="sobre">
+      <header class="painel-cabecalho">
+        <span class="painel-num">01</span>
+        <h2 class="painel-titulo">Sobre mim</h2>
+      </header>
+
+      <div class="sobre-conteudo">
+        <p>
+        Meu nome é <strong>Gabriele Lima da Conceição Gomes</strong>, sou Jamaicana
+          com dupla nacionalidade (Brasil e Jamaica). Comecei minha trajetória
+          profissional na área de Comissária de Bordo, trabalhando no setor turístico,
+          mas decidi seguir um novo caminho e hoje estou dando os primeiros passos na
+          área de Tecnologia
+        </p>
+        <p>
+          Estou em fase de explorar o universo da programação para descobrir em qual
+          área quero me especializar. Sou curiosa, dedicada e encaro cada novo desafio
+          como uma oportunidade de aprender e evoluir cada vez mais.
+        </p>
+
+        <!-- Etiquetas de hobbies/interesses -->
+        <h3 class="mini-titulo">O que eu curto</h3>
+        <div class="tags">
+          <span class="tag">📚 Leitura</span>
+          <span class="tag">🎵 Música</span>
+          <span class="tag">💻 Programação</span>
+          <span class="tag">✈️ Viajar</span>
+          <span class="tag">🏋️ Crossfit</span>
+          <span class="tag">🌱 Aprender</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- FORMAÇÃO ---------- -->
+    <section class="painel" id="formacao">
+      <header class="painel-cabecalho">
+        <span class="painel-num">02</span>
+        <h2 class="painel-titulo">Formação</h2>
+      </header>
+
+      <!-- Lista de formação em cartões empilhados -->
+      <div class="formacao-lista">
+        <article class="form-item">
+          <div class="form-periodo">2025 — Atual</div>
+          <div class="form-detalhe">
+            <h3>Ensino Superior em Tecnologia</h3>
+            <p class="form-local">Centro Universitário UNINTER</p>
+            <p>Cursando Fundamentos da Programação Web (HTML5, CSS3 e JavaScript).</p>
+          </div>
+        </article>
+
+        <article class="form-item">
+          <div class="form-periodo">2023</div>
+          <div class="form-detalhe">
+            <h3>Curso de Lógica de Programação</h3>
+            <p class="form-local">Curso complementar online</p>
+            <p>Fundamentos de algoritmos e resolução de problemas.</p>
+          </div>
+        </article>
+
+        <article class="form-item">
+           <div class="form-periodo">2023</div>
+           <div class="form-detalhe">
+             <h3>Ensino Médio</h3>
+             <p class="form-local">Abeka Academy — Pensacola, Flórida (EUA)</p>
+             <p>Concluí o Ensino Médio pela Abeka Academy.</p>
+           </div>
+        </article>
+      </div>
+
+      <!-- Idiomas e habilidades em duas colunas com barras -->
+      <div class="competencias">
+        <div class="competencia-bloco">
+          <h3 class="mini-titulo">Idiomas</h3>
+          <div class="skill">
+            <div class="skill-topo"><span>Português</span><em>Nativo</em></div>
+            <div class="barra"><i style="width:100%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="skill-topo"><span>Inglês</span><em>Nativo</em></div>
+            <div class="barra"><i style="width:100%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="skill-topo"><span>Espanhol</span><em>Básico</em></div>
+            <div class="barra"><i style="width:30%"></i></div>
+          </div>
+        </div>
+
+        <div class="competencia-bloco">
+          <h3 class="mini-titulo">Habilidades técnicas</h3>
+          <div class="skill">
+            <div class="skill-topo"><span>HTML5</span><em>85%</em></div>
+            <div class="barra"><i style="width:85%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="skill-topo"><span>CSS3</span><em>75%</em></div>
+            <div class="barra"><i style="width:75%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="skill-topo"><span>JavaScript</span><em>65%</em></div>
+            <div class="barra"><i style="width:65%"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- PORTFÓLIO ---------- -->
+    <section class="painel" id="portfolio">
+      <header class="painel-cabecalho">
+        <span class="painel-num">03</span>
+        <h2 class="painel-titulo">Portfólio</h2>
+      </header>
+      <p class="painel-intro">Alguns trabalhos e projetos que desenvolvi:</p>
+
+      <div class="projetos">
+        <!-- Cada cartão é um projeto. Troque os links pelos seus reais. -->
+        <article class="projeto">
+          <div class="projeto-capa" style="--c1:#7c5cff;--c2:#a78bfa">🌐</div>
+          <h3>Portfólio Pessoal</h3>
+          <p>Site responsivo feito com HTML, CSS e JavaScript puro.</p>
+          <a href="#contato" class="projeto-link">Ver detalhes →</a>
+        </article>
+
+        <article class="projeto">
+          <div class="projeto-capa" style="--c1:#ff6b9d;--c2:#ffa3c4">📝</div>
+          <h3>Lista de Tarefas</h3>
+          <p>App para organizar tarefas do dia a dia com interatividade em JS.</p>
+          <a href="#contato" class="projeto-link">Ver detalhes →</a>
+        </article>
+
+        <article class="projeto">
+          <div class="projeto-capa" style="--c1:#22c1c3;--c2:#6ee7e9">🎨</div>
+          <h3>Página de Estudos</h3>
+          <p>Exercícios de layout, cores e tipografia com CSS3.</p>
+          <a href="#contato" class="projeto-link">Ver detalhes →</a>
+        </article>
+
+        <article class="projeto">
+          <div class="projeto-capa" style="--c1:#f7b733;--c2:#fcd34d">🧮</div>
+          <h3>Calculadora Web</h3>
+          <p>Calculadora funcional para praticar lógica em JavaScript.</p>
+          <a href="#contato" class="projeto-link">Ver detalhes →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------- CONTATO ---------- -->
+    <section class="painel" id="contato">
+      <header class="painel-cabecalho">
+        <span class="painel-num">04</span>
+        <h2 class="painel-titulo">Contato</h2>
+      </header>
+      <p class="painel-intro">Quer falar comigo? Preencha o formulário abaixo.</p>
+
+      <div class="contato">
+        <!-- Dados de contato -->
+        <ul class="contato-dados">
+          <li><span>📧</span> gabrielelimec@gmail.com</li>
+          <li><span>📱</span> (21) 99268-1135</li>
+          <li><span>📍</span> Brasil</li>
+        </ul>
+
+        <!-- Formulário (envio tratado pelo JavaScript, sem recarregar) -->
+        <form class="form" id="form-contato" novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" />
+            <small class="erro" id="erro-nome"></small>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" />
+            <small class="erro" id="erro-email"></small>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem..."></textarea>
+            <small class="erro" id="erro-mensagem"></small>
+          </div>
+
+          <button type="submit" class="btn btn-primario btn-bloco">Enviar mensagem</button>
+        </form>
+      </div>
+
+      <!-- Rodapé do site -->
+      <footer class="rodape">
+        <p>&copy; <span id="ano"></span> Gabriele Lima da Conceição Gomes.</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       MODAL DE CONFIRMAÇÃO (após enviar o formulário)
+       ============================================================ -->
+  <div class="modal" id="modal">
+    <div class="modal-caixa">
+      <span class="modal-icone">✅</span>
+      <h3>Mensagem enviada com sucesso!</h3>
+      <p>Obrigada pelo contato. Responderei em breve.</p>
+      <button class="btn btn-primario" id="modal-fechar">Fechar</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
